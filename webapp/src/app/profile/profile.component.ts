@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: UserService, private validation: ValidationService) { }
 
   ngOnInit(): void {
   }
-
+getInfo
+  this.profile.email = "master@gmail.com";
+  this.profile.password = "demo";
+  this.service.login(this.profile).subscribe
 }

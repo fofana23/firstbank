@@ -7,9 +7,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  profile: Profile = {} as Profile;
+  message: string;
+  validEmail: boolean = true;
+
+  constructor(private service: UserService, private validation: ValidationService, private memory: SubjectService, private router: Router) { }
 
   ngOnInit(): void {
   }
+  login() {
+this.service.login(this.profile).subscribe(
+  data=> {
+    this.memory.setSession(data);
+    this.router.navigate(['dashboard']);
+  },
+  error => this.message = error.message,
+  () => this.reset()
+  );
+}
 
+validateEmail() {
+  this.validEmail = this.validation.validateEmail(this.profile.email);
+}
+
+reset() {
+  this.profile = {} as Profile;
+  this.message = "";
+}
 }
