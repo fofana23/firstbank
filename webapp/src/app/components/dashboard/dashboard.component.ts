@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Profiler } from 'inspector';
+import { AccountHolder } from 'src/app/transaction/account-holder';
+import { Profile } from 'src/app/transaction/profile';
+import { Transaction } from 'src/app/transaction/transaction';
 
 @Component({
   selector: 'app-dashboard',

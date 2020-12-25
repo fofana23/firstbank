@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Profile } from 'src/app/transaction/profile';
 
 @Component({
   selector: 'app-home',
