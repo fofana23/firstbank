@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
+import { ValidationService } from 'src/app/services/validation.service';
 import { AccountHolder } from 'src/app/transaction/account-holder';
 
 @Component({
@@ -8,6 +9,9 @@ import { AccountHolder } from 'src/app/transaction/account-holder';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+
+  holder: AccountHolder = {} as AccountHolder
+  message: string;
 
   constructor(private service: UserService, private validation: ValidationService) { }
 
@@ -22,7 +26,7 @@ export class RegisterComponent implements OnInit {
     );
   }
 reset() {
-  this,holder = {} as AccountHolder;
+  this.holder = {} as AccountHolder;
   this.message = "";
 }
 

@@ -36,7 +36,7 @@ export class DashboardComponent implements OnInit {
         if (data.accounts)
           data.accounts.forEach(account => {
           if (account.credit)
-            this.creditAccounts.push(account)
+            this.creditAccounts.push(account);
           else
             this.bankingAccounts.push(account);
         });

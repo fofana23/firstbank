@@ -11,6 +11,6 @@ describe('SubjectService', () => {
   });
 
   it('should be created', () => {
-    exception(service).toBeTruthy();
+    expect(service).toBeTruthy();
   });
 });

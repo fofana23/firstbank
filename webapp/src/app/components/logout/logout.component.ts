@@ -17,7 +17,7 @@ export class LogoutComponent implements OnInit {
   constructor(private service: UserService, private memory: SubjectService, private router: Router) { }
 
   ngOnInit(): void {
-    runInThisContext.memory.session.subscribe(
+    this.memory.session.subscribe(
       data => {
         this.profile.firstname = data.firstname;
         this.profile.email = data.email;

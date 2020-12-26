@@ -1,5 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
   baseUrl: "http://myurl:9000/api/v1",
   registerUrl: "register",
   loginUrl:"login",

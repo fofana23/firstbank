@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SubjectService } from 'src/app/services/subject.service';
 import { UserService } from 'src/app/services/user.service';
 import { ValidationService } from 'src/app/services/validation.service';
@@ -19,11 +20,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   login() {
-this.service.login(this.profile).subscribe(
-  data=> {
-    this.memory.setSession(data);
-    this.router.navigate(['dashboard']);
+    this.service.login(this.profile).subscribe(
+      data=> {
+      this.memory.setSession(data);
+      this.router.navigate(['dashboard']);
   },
   error => this.message = error.message,
   () => this.reset()
