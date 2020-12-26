@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SubjectService } from 'src/app/services/subject.service';
+import { UserService } from 'src/app/services/user.service';
 import { Profile } from 'src/app/transaction/profile';
 import { runInThisContext } from 'vm';
 
@@ -19,7 +21,7 @@ export class LogoutComponent implements OnInit {
       data => {
         this.profile.firstname = data.firstname;
         this.profile.email = data.email;
-        this.profile.password = data.password:
+        this.profile.password = data.password;
 
       }
     );

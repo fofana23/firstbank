@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { SubjectService } from 'src/app/services/subject.service';
+import { UserService } from 'src/app/services/user.service';
+import { ValidationService } from 'src/app/services/validation.service';
 import { Profile } from 'src/app/transaction/profile';
 
 @Component({

@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Profiler } from 'inspector';
+import { SubjectService } from 'src/app/services/subject.service';
+import { UserService } from 'src/app/services/user.service';
+import { ValidationService } from 'src/app/services/validation.service';
 import { AccountHolder } from 'src/app/transaction/account-holder';
 import { Profile } from 'src/app/transaction/profile';
 import { Transaction } from 'src/app/transaction/transaction';
@@ -12,9 +16,9 @@ import { Transaction } from 'src/app/transaction/transaction';
 export class DashboardComponent implements OnInit {
 
   holder: AccountHolder = {} as AccountHolder;
-  profile: Profile = {} as Profiler;
+  profile: Profile = {} as Profile;
   transaction: Transaction = {} as Transaction
-  creditAccounts: Accounts: Account[] = []
+  creditAccounts: Account[] = []
   bankingAccounts: Account[] = [];
   deposit: boolean;
   withdraw: boolean;
@@ -47,7 +51,7 @@ getInfo() {
     data => {
       this.holder= data;
       this.memory.setSession(data);
-    };
+  );
     error => this.message = error.message,
     () => this.reset()
   );
@@ -89,7 +93,7 @@ selectTansaction(name: string) {
 
 selectTransfer(transferName: string, receiveEmail: string) {
   this.transaction.transferAccount = transferName;
-  this.transaction.receiveEmail = receiverEmail;
+  this.transaction.receiverEmail = receiveEmail;
 }
 
 depositMoney() {

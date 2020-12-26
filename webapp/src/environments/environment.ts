@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl: "http://localhost:9000/api/v1",
+  registerUrl: "register",
+  loginUrl:"login",
+  logoutUrl:"logout",
+  applyUrl: "apply",
+  editUrl: "edit",
+  depositUrl: "deposit",
+  withdrawUrl: "withdraw",
+  transferUrl: "transfer",
 };
 
 /*
