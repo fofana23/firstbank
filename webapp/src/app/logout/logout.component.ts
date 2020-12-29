@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SubjectService } from 'src/app/services/subject.service';
 import { UserService } from 'src/app/services/user.service';
-import { Profile } from 'src/app/transaction/profile';
-import { runInThisContext } from 'vm';
+import { Profile } from 'src/app/models/profile';
+
 
 @Component({
   selector: 'app-logout',

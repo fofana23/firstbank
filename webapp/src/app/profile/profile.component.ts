@@ -3,8 +3,8 @@ import { Router } from '@angular/router';
 import { SubjectService } from 'src/app/services/subject.service';
 import { UserService } from 'src/app/services/user.service';
 import { ValidationService } from 'src/app/services/validation.service';
-import { AccountHolder } from 'src/app/transaction/account-holder';
-import { Profile } from 'src/app/transaction/profile';
+import { AccountHolder } from 'src/app/models/account-holder';
+import { Profile } from 'src/app/models/profile';
 
 @Component({
   selector: 'app-profile',

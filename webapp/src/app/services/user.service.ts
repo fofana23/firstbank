@@ -1,9 +1,11 @@
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs/internal/Observable";
 import { environment } from "src/environments/environment";
-import { AccountHolder } from "../transaction/account-holder";
-import { Profile } from "../transaction/profile";
-import { Transaction } from "../transaction/transaction";
+import { AccountHolder } from "../models/account-holder";
+import { Profile } from "../models/profile";
+import { Transaction } from "../models/transaction";
+import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'

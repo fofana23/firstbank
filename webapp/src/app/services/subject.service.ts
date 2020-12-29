@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Subject } from "rxjs";
 import { BehaviorSubject } from "rxjs";
-import { AccountHolder } from "../transaction/account-holder";
+import { AccountHolder } from "../models/account-holder";
 
 @Injectable({
   providedIn: 'root'

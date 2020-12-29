@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import { ValidationService } from 'src/app/services/validation.service';
-import { AccountHolder } from 'src/app/transaction/account-holder';
+import { AccountHolder } from 'src/app/models/account-holder';
 
 @Component({
   selector: 'app-register',
