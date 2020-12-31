@@ -1,12 +1,29 @@
+import { HttpClientModule } from "@angular/common/http";
 import { TestBed } from "@angular/core/testing";
-import { exception } from "console";
+import { FormsModule } from "@angular/forms";
+import { BrowserModule } from "@angular/platform-browser";
+import { AppRoutingModule } from "../app-routing.module";
 import { SubjectService } from "./subject.service";
+import { UserService } from "./user.service";
+import { ValidationService } from "./validation.service";
 
 describe('SubjectService', () => {
   let service: SubjectService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        HttpClientModule
+      ],
+      providers: [
+        UserService,
+        ValidationService,
+        SubjectService
+      ],
+    });
     service = TestBed.inject(SubjectService);
   });
 
