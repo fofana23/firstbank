@@ -52,4 +52,24 @@ describe('DashboardComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should getInfo', () => {
+    component.getInfo();
+    expect(component).toBeTruthy();
+  });
+
+  it('should withdraw money', () => {
+    component.withdrawMoney();
+    expect(component).toBeTruthy();
+  });
+
+  it('should deposit money', () => {
+    component.depositMoney();
+    expect(component).toBeTruthy();
+  });
+
+  it('should reset', () => {
+    component.reset();
+    expect(component).toBeTruthy();
+  });
 });

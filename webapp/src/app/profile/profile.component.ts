@@ -46,6 +46,7 @@ getInfo() {
 }
 
 toggle(mode: string) {
+  console.log(mode);
   switch (mode) {
     case "edit":
       this.edit = true;

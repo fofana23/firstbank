@@ -52,4 +52,14 @@ describe('RegisterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should register', () => {
+    component.register();
+    expect(component).toBeTruthy();
+  });
+
+  it('should reset', () => {
+    component.reset();
+    expect(component).toBeTruthy();
+  });
 });

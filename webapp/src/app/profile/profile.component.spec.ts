@@ -58,4 +58,15 @@ describe('ProfileComponent', () => {
     component.cancelProfile();
     expect(component).toBeTruthy();
   });
+
+  it('should save profile', () => {
+    component.saveProfile();
+    expect(component).toBeTruthy();
+  });
+
+
+  it('should reset', () => {
+    component.reset();
+    expect(component).toBeTruthy();
+  });
 });

@@ -53,4 +53,9 @@ describe('LogoutComponent', () => {
     let num = 10
     expect(num).toBe(10);
   });
+
+  it('should logout', () => {
+    component.logout();
+    expect(component).toBeTruthy();
+  });
 });

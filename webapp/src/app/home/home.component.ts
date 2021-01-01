@@ -4,6 +4,7 @@ import { SubjectService } from 'src/app/services/subject.service';
 import { UserService } from 'src/app/services/user.service';
 import { ValidationService } from 'src/app/services/validation.service';
 import { Profile } from 'src/app/models/profile';
+import { Logger } from '../utils/logger';
 
 @Component({
   selector: 'app-home',
@@ -22,6 +23,7 @@ export class HomeComponent implements OnInit {
   }
 
   login() {
+    Logger.info("message");
     this.service.login(this.profile).subscribe(
       data=> {
       this.memory.setSession(data);

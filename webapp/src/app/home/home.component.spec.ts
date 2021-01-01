@@ -58,6 +58,16 @@ describe('HomeComponent', () => {
     component.login();
     expect(component).toBeTruthy();
   });
+
+  it('should validate email', () => {
+    component.validateEmail();
+    expect(component).toBeTruthy();
+  });
+
+  it('should reset', () => {
+    component.reset();
+    expect(component).toBeTruthy();
+  });
 });
 
 class UserServiceStub{
